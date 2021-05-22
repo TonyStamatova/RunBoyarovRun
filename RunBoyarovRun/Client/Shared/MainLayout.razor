@@ -1,17 +1,17 @@
-﻿@inherits LayoutComponentBase
+﻿@using RunBoyarovRun.Shared
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
+@inherits LayoutComponentBase
+
+<header>
+    <NavMenu Brand="@GlobalConstants.ClubName" />
+</header>
+
+<main role="main" class="container py-3 overflow-auto">
+    @Body
+</main>
+
+<footer class="footer text-center text-muted bg-dark ">
+    <div>
+        @GlobalConstants.ClubName - &copy; 2021
     </div>
-
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
+</footer>
