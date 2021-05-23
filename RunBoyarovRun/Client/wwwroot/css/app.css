@@ -1,5 +1,13 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+:root {
+    --dark: #46344E;
+    --neutralDark: #5A5560;
+    --bright: #FAED26;
+    --muted: #9D8D8F;
+    --soft: #9B786F;
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -48,3 +56,27 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.bg-run-dark {
+    background-color: var(--dark);
+}
+
+.bg-run-neutral-dark {
+    background-color: var(--neutralDark);
+}
+
+.text-run-bright {
+    color: var(--bright);
+}
+
+.text-run-muted {
+    color: var(--muted);
+}
+
+.text-run-soft {
+    color: var(--soft);
+}
+
+.text-run-dark {
+    color: var(--dark);
+}
