@@ -1,0 +1,43 @@
+﻿@page "/events"
+@using RunBoyarovRun.Shared
+@inject HttpClient Http
+
+<h1>Събития</h1>
+
+@if (events == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sportEvent in events)
+            {
+                <tr>
+                    <td>@sportEvent.Date.ToShortDateString()</td>
+                    <td>@sportEvent.Title</td>
+                    <td>@sportEvent.Description</td>
+                    <td>@sportEvent.Image</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Event[] events;
+
+    protected override async Task OnInitializedAsync()
+    {
+        events = await Http.GetFromJsonAsync<Event[]>("Event");
+    }
+}
