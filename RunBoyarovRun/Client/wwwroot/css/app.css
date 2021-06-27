@@ -69,6 +69,14 @@ a, .btn-link {
     background-color: var(--neutralDark);
 }
 
+.bg-run-muted {
+    background-color: var(--muted);
+}
+
+.bg-run-soft {
+    background-color: var(--soft);
+}
+
 .text-run-bright {
     color: var(--bright);
 }

@@ -2,6 +2,6 @@
 {
     public static class GlobalConstants
     {
-        public const string ClubName = "RunBoyarovRun";
+        public const string ClubName = "Prefontaine";
     }
 }
