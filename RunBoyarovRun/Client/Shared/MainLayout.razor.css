@@ -4,8 +4,11 @@
     flex-direction: column;
 }
 
-.main {
-    flex: 1;
+.background-wrapper {
+    background-image: url("images/162479816889353320.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sidebar {
